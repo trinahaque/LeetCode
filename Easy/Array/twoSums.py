@@ -38,9 +38,21 @@ def twoSumDict(nums, target):
             break
     return result
 
-nums = [8, 11, 3, 17, 1, 15, 5]
+# time O(n) for one loop
+# time O(1) for look up
+# space O(n) for one hashmap
+def twoSumOneLoop(nums, target):
+    dict = {}
+    for i in range(len(nums)):
+        remainder = target - nums[i]
+        # make sure index is not the same as i
+        if remainder in dict.keys() and dict[remainder] != i:
+            return [dict[remainder], i]
+        dict[nums[i]] = i
+
+
+nums = [8, 11, 3, 17, 2, 15, 5]
 nums2 = [2, 3]
-print(twoSumDict(nums2, 5))
 
 
-print (twoSum(nums2, 4))
+print (twoSumOneLoop(nums, 16))
