@@ -10,6 +10,10 @@ An input string is valid if:
 # {[]} --> True
 # ([)]) --> False
 
+# Time Complexity: O(n) to loop through every character in String + O(1) look up time
+# Space Complexity: O(n) to store the stack. Worst case all char in string
+# + Constact for the dict
+
 def isValid(s):
         """
         :type s: str
