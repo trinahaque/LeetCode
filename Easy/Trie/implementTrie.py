@@ -10,7 +10,9 @@ class Trie:
         Initialize your data structure here.
         """
         self.root = TrieNode("", False)
-        
+
+    # Time Complexity: O(n) where n is the number of characters in a word
+    # Space Complexity: O(n) where n is the number of nodes created
     def insert(self, word):
         """
         Inserts a word into the trie.
@@ -18,7 +20,6 @@ class Trie:
         :rtype: void
         """
         node = self.root
-        
         for char in word:
             if char not in node.children:
                 newNode = TrieNode(char, False)
@@ -26,6 +27,8 @@ class Trie:
             node = node.children[char]
         node.isWord = True
     
+    # Time Complexity: O(n) where n is the number of characters in a word
+    # Space Complexity: O(1) 
     def search(self, word):
         """
         Returns if the word is in the trie.
@@ -42,7 +45,8 @@ class Trie:
             return True
         else:
             return False
-
+    # Time Complexity: O(n) where n is the number of characters in a prefix
+    # Space Complexity: O(1)
      def startsWith(self, prefix):
         """
         Returns if there is any word in the trie that starts with the given prefix.
