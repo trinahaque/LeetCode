@@ -1,6 +1,9 @@
+# Time Complexity: O(n) for loop + nlog(n) sort --> nlog(n)
+# Space Complexity: O(1) or constant
+
 def missingNumber(nums):
     # sort the array
-    # time complexity: O(n)
+    # time complexity: O(nlog(n)) in python
     nums = sorted(nums)
 
     # if 1st val is not 0, return 0
