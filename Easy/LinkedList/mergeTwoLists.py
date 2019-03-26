@@ -32,6 +32,37 @@ def mergeTwoLists(self, l1, l2):
         else:
             current.next = l1
         return head
+def mergeSortedList(l1, l2):
+    if l1 == None and l2 == None:
+        return None
+    if l1 == None and l2 != None:
+        return l2
+    if l1 != None and l2 == None:
+        return l1
+    
+    if l1.val <= l2.val:
+        head = l1
+        l1 = l1.next
+    else:
+        head = l2
+        l2 = l2.next
+    
+    current = head
+    p = l1
+    q = l2
+    while p != None and q != None:
+        if p.val <= q.val:
+            current = p
+            p = p.next
+        else:
+            current = q
+            q = q.next
+        current = current.next
+    if q is None:
+        current = p
+    else:
+        current = q
+    return head
 
 
                 
