@@ -18,4 +18,23 @@ Class Solution:
             prev = current
             current = next
         return prev
+
+# 3/25
+# Time Complexity: O(n) --> iterate through all nodes
+# Space Complexity: O(3) --> constant
+def reverseList(self, head):
+        if head == None or head.next == None:
+            return head
+        else:
+            prev = None
+            current = head
+            next = current.next
+            while next:
+                current.next = prev
+                prev = current
+                current = next
+                next = next.next
+            current.next = prev
+            head = current
+            return head
         
