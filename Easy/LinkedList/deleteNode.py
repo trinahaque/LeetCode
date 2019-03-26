@@ -11,6 +11,9 @@ Class ListNode:
 
 # Head = [4,5,1,9], node = 5
 # Output [4, 1, 9]
+
+# Time Complexity: Constant or O(1)
+# Space Complexity: Constant/0
 def deleteNode(self, node):
     node.val = node.next.val
     node.next = node.next.next
