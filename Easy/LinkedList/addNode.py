@@ -27,7 +27,7 @@ class SinglyLinkedList:
             print (current.val)
             current = current.next
 
-sll = SinglyLinkedList()
-sll.addLast(1)
-sll.addLast(5)
-sll.print()
+# sll = SinglyLinkedList()
+# sll.addLast(1)
+# sll.addLast(5)
+# sll.print()
