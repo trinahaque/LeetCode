@@ -2,6 +2,7 @@ from addNode import *
 
 # Time Complexity: 2n
 # Space Complexity: Constant (only created variable curr2, reversePoint, head2, prev, next)
+# Edge Cases: even or odd list
 def isPalindrome(head):
     # Edge case: if list is empty or has only one value
     if head == None or head.next == None:
