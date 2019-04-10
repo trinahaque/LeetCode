@@ -41,4 +41,43 @@ def isValid(s):
         else:
             return True
 
-print (isValid("([]])"))
+# print (isValid("([]])"))
+
+# Time Complexity: O(n) --> traverse string + O(m) --> dict.keys()
+# Space Complexity: 0(m)--> dict + O(n) --> stack
+def isValidParenthesis(s):
+        """
+        :type s: str
+        :rtype: bool
+        """
+        if len(s) < 1:
+            return True
+        stack = []
+        dict = {
+            ')': '(',
+            '}': '{',
+            ']': '['
+        }
+        for i in range(len(s)):
+            if s[i] not in dict.keys():
+                stack.append(s[i])
+            else:
+                if len(stack) == 0:
+                    return False
+                if stack.pop() != dict[s[i]]:
+                    return False
+        if len(stack) != 0:
+            return False
+        return True
+
+s = ''
+s1 = '('
+s2 = '{([])}'
+s3 = '{([])]}'
+s4 = '{([{])]'
+
+print (isValidParenthesis(s))
+print (isValidParenthesis(s1))
+print (isValidParenthesis(s2))
+print (isValidParenthesis(s3))
+print (isValidParenthesis(s4))
