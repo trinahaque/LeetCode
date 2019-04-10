@@ -1,5 +1,7 @@
-class MinStack(object):
+# Time Complexity: Constant (just return the last value)
+# Space Complexity: O(n) --> for the minStack
 
+class MinStack(object):
     def __init__(self):
         """
         initialize your data structure here.
