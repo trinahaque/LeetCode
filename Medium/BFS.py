@@ -47,4 +47,6 @@ def BFS(graph, start):
                 visited[eachEdge] = True
 BFS(graph, "A")
 
+# A, B, C, E, G, D, F, 
+
 
