@@ -5,19 +5,22 @@ class TreeNode:
         self.left = None
         self.right = None
 
+# Input: TreeNode
+# Output: An array of int after inorder traversal
+# Time Complexity: O(n) --> have to traverse all the nodes
+# Space Complexity: O(n) --> creating stacks if the tree is linear (all left nodes)
+# average O(logn)
 class Solution:
     def __init__(self):
         self.result = []
-    def inorderTraversal(self, root: TreeNode):
+    def inorderTraversal(self, root):
         if root == None:
             return self.result
-        if root.left:
-            self.inorderTraversal(root.left)
+        self.inorderTraversal(root.left)
         self.result.append(root.val)
-        if root.right:
-            self.inorderTraversal(root.right)
+        self.inorderTraversal(root.right)
         return self.result
 
-s = Solution()
-nums = [1, None, 2, 3]
-s.inorderTraversal(nums)
+# nums = [5, 3, null, 4, null, null, 7, null, 9, 8, null]
+nums2 = [TreeNode(1), TreeNode(None), TreeNode(2), TreeNode(3)]
+
