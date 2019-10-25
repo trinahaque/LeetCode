@@ -14,16 +14,16 @@ class Solution:
             return None
         if key == root.val:
             return root
-        if key > root.val:
-            if key == root.right.val:
-                return (root, root.right, right)
-            else:
-                self.search(root.right, key)
-        else:
+        if key < root.val:
             if key == root.left.val:
                 return (root, root.left, left)
             else:
                 self.search(root.left, key)
+        else:
+            if key == root.right.val:
+                return (root, root.right, right)
+            else:
+                self.search(root.right, key)
         return None
 
     def deleteNode(self, root: TreeNode, key: int):
