@@ -16,3 +16,5 @@ def moveZeroes(nums):
     return nums
 nums = [0, 0, 5, 4, 6]
 print(moveZeroes(nums))
+
+
