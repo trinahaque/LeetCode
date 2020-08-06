@@ -1,6 +1,7 @@
 #Time Complexity --> O(n) --> 2 loops, O(n) + O(n)
 #Space Complexity --> O(n) --> 1 Hash map
 def singleNumber(nums):
+    # hashset can have default value of 1 during creation
     frequencyDict = {}
     for number in nums:
         if number in frequencyDict:
