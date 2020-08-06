@@ -1,6 +1,11 @@
 # Time Complexity: O(n) --> one loop
 # Space Complexity: O(1) or Constant --> only storing two variables
 
+# Kadane's Algorithm: start a new sum at current index or continue from
+# previous sum
+
+# There is a divide/conquer way
+
 def maxSubArray(nums):
     current_max = nums[0]
     max_sum = current_max
