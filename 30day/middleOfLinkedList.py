@@ -21,3 +21,16 @@ def middleNode(head):
         curr = curr.next
         counter += 1
     return curr
+
+
+# 2nd approach with runner
+# if fast reaches the end, that means we are in the middle
+# Time Complexity: O(N)
+# Space Complexity: Constant
+def middleNode(self, head):
+    slow = head
+    fast = head
+    while fast and fast.next:
+        slow = slow.next
+        fast = fast.next.next
+    return slow
