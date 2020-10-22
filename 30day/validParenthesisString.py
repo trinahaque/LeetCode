@@ -1,6 +1,8 @@
 def checkValidString(s):
     openStack = []
     starStack = []
+
+    # Check if all ) is accounted for
     for i in range(len(s)):
         if s[i] == "(":
             openStack.append(i)
@@ -14,7 +16,8 @@ def checkValidString(s):
             # means both open and star stacks are empty
             else:
                 return False
-
+    
+    # Check if all ( is accounted for
     # traversed through the whole string
     # check if openStack still has some (
     while len(openStack) > 0:
