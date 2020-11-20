@@ -21,5 +21,4 @@ def backspaceCompare(S, T):
     # returning true or false based on the comparison
     return stackS == stackT
 
-
 print(backspaceCompare('a##c#', 'a#c'))
