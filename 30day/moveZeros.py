@@ -29,7 +29,7 @@ def moveZeros2(nums):
             zeroIndex = zeroIndex + 1
     return nums
 
-nums = [0, 0, 5, 4, 6]
+nums = [1]
 print(moveZeros2(nums))
 
 
